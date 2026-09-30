@@ -1,7 +1,7 @@
 (function(){
-var t=[].slice.call(document.querySelectorAll('button.gt')),lb=document.getElementById('lb'),v=document.getElementById('lbv'),cap=document.getElementById('lbc'),i=0,sx=0;
-function show(n){i=(n+t.length)%t.length;var s=t[i].querySelector('video');v.poster=s.poster;v.src=window.clipSrc(s);v.setAttribute('aria-label',s.getAttribute('aria-label'));cap.textContent=s.getAttribute('aria-label');lb.hidden=false;document.body.classList.add('lock');var p=v.play();if(p&&p.catch)p.catch(function(){})}
-function hide(){lb.hidden=true;v.pause();v.removeAttribute('src');v.load();document.body.classList.remove('lock')}
+var t=[].slice.call(document.querySelectorAll('button.gt')),lb=document.getElementById('lb'),im=document.getElementById('lbi'),cap=document.getElementById('lbc'),i=0,sx=0;
+function show(n){i=(n+t.length)%t.length;var s=t[i].querySelector('img');im.src=s.src;im.alt=s.alt;cap.textContent=t[i].querySelector('span').textContent;lb.hidden=false;document.body.classList.add('lock')}
+function hide(){lb.hidden=true;document.body.classList.remove('lock')}
 t.forEach(function(b,n){b.addEventListener('click',function(){show(n)})});
 lb.querySelector('.lx').onclick=hide;lb.querySelector('.lp').onclick=function(){show(i-1)};lb.querySelector('.ln').onclick=function(){show(i+1)};
 lb.addEventListener('click',function(e){if(e.target===lb)hide()});

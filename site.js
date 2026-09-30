@@ -66,14 +66,6 @@ if(cd){var open=new Date('2026-10-01T09:00:00+01:00'),end=new Date('2026-10-15T0
   var s=Math.floor(dd/1e3),v=[[Math.floor(s/86400),'Days'],[Math.floor(s%86400/3600),'Hours'],[Math.floor(s%3600/60),'Mins'],[s%60,'Secs']];
   cd.innerHTML=v.map(function(x){return'<div><b>'+String(x[0]).padStart(2,'0')+'</b><small>'+x[1]+'</small></div>'}).join('');setTimeout(tick,1000)})()}
 
-/* ---- lazy looping clips: load + play when visible, pause when not ---- */
-var vids=$$('video[data-src]'),ext=d.createElement('video').canPlayType('video/mp4; codecs="avc1.42E01E"')?'mp4':'webm';
-window.clipSrc=function(v){return v.dataset.src.replace(/\.mp4$/,'.'+ext)};
-if(vids.length){
- var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
-  if(e.isIntersecting){if(!v.src){v.src=clipSrc(v)}if(!RM){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else{v.pause()}})},{rootMargin:'150px'});
- vids.forEach(function(v){vio.observe(v)})}
-
 /* ---- mailto forms ---- */
 window.mailForm=function(id,subject,keys,labels){
  var f=d.getElementById(id);if(!f)return;
