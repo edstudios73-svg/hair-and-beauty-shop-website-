@@ -7,6 +7,7 @@ PHONE, PHONE_T = "01902 471053", "01902471053"
 EMAIL = "mariejaca@yahoo.com"
 IG = "https://www.instagram.com/marieshairandbeautysalon/"
 ADDR = "48 Victoria Street, Wolverhampton WV1 3PJ"
+BASE = "https://maries-hair-and-beauty.vercel.app/"
 MAPS = "https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolverhampton+WV1+3PJ"
 
 ARROW = '<svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>'
@@ -38,7 +39,7 @@ NAV = [("services.html", "Services"), ("gallery.html", "Gallery"), ("offers.html
        ("careers.html", "Careers"), ("contact.html", "Contact")]
 
 
-def page(fname, title, desc, body, hero, script="", og="video/clip3.jpg"):
+def page(fname, title, desc, body, hero, script=""):
     links = "".join('<a href="%s"%s>%s</a>' % (h, ' class="on"' if h == fname else "", t) for h, t in NAV)
     mob = "".join('<a href="%s" style="--i:%d">%s</a>' % (h, i, t) for i, (h, t) in enumerate([("index.html", "Home")] + NAV))
     return f"""<!doctype html>
@@ -49,15 +50,31 @@ def page(fname, title, desc, body, hero, script="", og="video/clip3.jpg"):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0c0709">
+<link rel="canonical" href="{BASE}{'' if fname == 'index.html' else fname}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Marie's Hair &amp; Beauty">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="{BASE}{'' if fname == 'index.html' else fname}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{og}">
-<link rel="icon" href="img/logo.png">
+<meta property="og:image" content="{BASE}img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Marie's Hair &amp; Beauty: Look Good. Feel Good. Be You.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{BASE}img/og-image.jpg">
+<meta name="apple-mobile-web-app-title" content="Marie's">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"HairSalon","name":"Marie's Hair & Beauty","telephone":"+441902471053","email":"{EMAIL}","url":"https://maries-hair-and-beauty.vercel.app/","sameAs":["{IG}"],"address":{{"@type":"PostalAddress","streetAddress":"48 Victoria Street","addressLocality":"Wolverhampton","postalCode":"WV1 3PJ","addressCountry":"GB"}}}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"HairSalon","name":"Marie's Hair & Beauty","telephone":"+441902471053","email":"{EMAIL}","url":"{BASE}","logo":"{BASE}img/icon-512.png","image":"{BASE}img/og-image.jpg","sameAs":["{IG}"],"address":{{"@type":"PostalAddress","streetAddress":"48 Victoria Street","addressLocality":"Wolverhampton","postalCode":"WV1 3PJ","addressCountry":"GB"}}}}</script>
 </head>
 <body class="pg-{fname.split('.')[0]}">
 <div class="grain" aria-hidden="true"></div><div class="prog" aria-hidden="true"></div>
