@@ -12,13 +12,22 @@ MAPS = "https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolve
 ARROW = '<svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>'
 
 SERVICES = [
-    ("Hair Cuts", "Sharp, clean cuts, fades and trims. Tell us the look you want and we'll shape it to suit you.", "Hair Cut"),
+    ("Hair Cuts", "Sharp, clean cuts, fades and trims for everyone. Tell us the look you want and we'll shape it to suit you.", "Hair Cut"),
     ("Braids & Knotless", "Box braids, knotless braids and protective styles, neat at the root and made to last.", "Braids / Knotless"),
     ("Cornrows & Twists", "From simple and sleek to full statement patterns, every line parted with care.", "Cornrows / Twists"),
     ("Hair Styling", "Blow-dries, sleek finishes, curls and occasion hair for the days that matter.", "Hair Styling"),
     ("Colour & Highlights", "Rich colour, bright highlights and finishing touches that make your style glow.", "Colouring / Highlights"),
     ("Hair Treatments", "Nourishing treatments that keep your hair healthy, strong and ready to grow.", "Hair Treatment"),
 ]
+
+
+CLIPS = {1: "Fresh twists", 2: "Braids with beads", 3: "Sleek silk bob", 4: "Defined curls", 5: "Loc styling"}
+
+
+def vid(n, attrs="", cls=""):
+    """Lazy muted looping clip. First paint = poster; site.js loads + plays it when visible."""
+    return (f'<video class="{cls}" muted loop playsinline preload="none" poster="video/clip{n}.jpg" '
+            f'data-src="video/clip{n}.mp4" width="540" height="960" aria-label="{CLIPS[n]}" {attrs}></video>')
 
 
 def q(v):
@@ -29,7 +38,7 @@ NAV = [("services.html", "Services"), ("gallery.html", "Gallery"), ("offers.html
        ("careers.html", "Careers"), ("contact.html", "Contact")]
 
 
-def page(fname, title, desc, body, hero, script="", og="img/braids.jpg"):
+def page(fname, title, desc, body, hero, script="", og="video/clip3.jpg"):
     links = "".join('<a href="%s"%s>%s</a>' % (h, ' class="on"' if h == fname else "", t) for h, t in NAV)
     mob = "".join('<a href="%s" style="--i:%d">%s</a>' % (h, i, t) for i, (h, t) in enumerate([("index.html", "Home")] + NAV))
     return f"""<!doctype html>
@@ -111,9 +120,9 @@ hero = f"""<section class="hero dark" id="top">
       <div class="hcta" data-r data-d="4"><a class="btn" href="book.html" data-mag>Book appointment {ARROW}</a><a class="btn line" href="services.html" data-mag>Explore services</a></div>
     </div>
     <div class="hpics" aria-hidden="true">
-      <figure class="arch a1" data-speed="-30"><img src="img/cornrow.jpg" alt="" width="320" height="400"></figure>
-      <figure class="arch a2" data-speed="40"><img src="img/braids.jpg" alt="" width="320" height="500"></figure>
-      <figure class="arch a3" data-speed="-55"><img src="img/curls.jpg" alt="" width="320" height="400"></figure>
+      <figure class="arch a1" data-speed="-30">{vid(2)}</figure>
+      <figure class="arch a2" data-speed="40">{vid(3)}</figure>
+      <figure class="arch a3" data-speed="-55">{vid(4)}</figure>
       <a class="seal" href="offers.html" data-mag aria-label="Re-grand opening offer: 10% off">
         <svg viewBox="0 0 200 200"><defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#c">RE-GRAND OPENING · 1ST OCTOBER 2026 · 14 DAYS · </textPath></text></svg>
         <b>10<small>%</small></b><span>off</span>
@@ -151,10 +160,7 @@ home = f"""
     <div class="shead"><p class="eyebrow" data-r>Recent work</p><h2 data-split>Fresh from <em>the chair.</em></h2></div>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="Recent work">
-    <figure data-tilt><img src="img/braids.jpg" alt="Knotless braids with gold highlights" loading="lazy" width="633" height="985"><figcaption>Knotless braids</figcaption></figure>
-    <figure data-tilt><img src="img/curls.jpg" alt="Defined natural curls" loading="lazy" width="633" height="795"><figcaption>Natural curls</figcaption></figure>
-    <figure data-tilt><img src="img/cornrow.jpg" alt="Braided updo" loading="lazy" width="639" height="795"><figcaption>Braided updo</figcaption></figure>
-    <figure data-tilt><img src="img/sleek.jpg" alt="Sleek neat style" loading="lazy" width="639" height="795"><figcaption>Sleek &amp; neat</figcaption></figure>
+    {"".join(f'<figure data-tilt>{vid(n)}<figcaption>{CLIPS[n]}</figcaption></figure>' for n in (3, 2, 4, 1, 5))}
     <a class="railend" href="gallery.html"><span>See the gallery</span>{ARROW}</a>
   </div>
 </section>
@@ -220,20 +226,17 @@ write("services.html", page("services.html", "Services | Marie's Hair & Beauty",
       body, phero("Services", "Every style, <em>every texture.</em>", "Unisex. All hair types. Done with care.")))
 
 # ============================================================== GALLERY
-items = [("braids", "Knotless braids with gold highlights"), ("curls", "Defined natural curls"),
-         ("cornrow", "Braided updo"), ("sleek", "Sleek neat style")]
-tiles = "".join(f'<button class="gt" data-i="{i}" aria-label="Open: {a}" data-r data-d="{i}"><img src="img/{n}.jpg" alt="{a}" loading="lazy"><span>{a}</span></button>' for i, (n, a) in enumerate(items))
+tiles = "".join(f'<button class="gt" data-i="{i}" data-n="{n}" aria-label="Play: {CLIPS[n]}" data-r data-d="{i}">{vid(n)}<span>{CLIPS[n]}</span></button>' for i, n in enumerate((3, 2, 4, 1, 5)))
+tiles += f'<a class="gt ig" href="{IG}" target="_blank" rel="noopener" data-r data-d="5"><em>More on</em><b>Instagram</b><small>@marieshairandbeautysalon</small>{ARROW}</a>'
 body = f"""
 <section class="light pad"><div class="wrap">
   <div class="masonry">{tiles}</div>
-  <div class="igcard" data-r><div><p class="eyebrow dk">Follow along</p><h2>More on <em>Instagram.</em></h2><p class="mut">New styles, transformations and opening updates, posted regularly.</p></div>
-  <a class="btn" href="{IG}" target="_blank" rel="noopener" data-mag>@marieshairandbeautysalon {ARROW}</a></div>
 </div></section>
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="lx" aria-label="Close">×</button><button class="lp" aria-label="Previous">‹</button><figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure><button class="ln" aria-label="Next">›</button></div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Video viewer"><button class="lx" aria-label="Close">×</button><button class="lp" aria-label="Previous">‹</button><figure><video id="lbv" muted loop playsinline controls></video><figcaption id="lbc"></figcaption></figure><button class="ln" aria-label="Next">›</button></div>
 """
 write("gallery.html", page("gallery.html", "Gallery | Marie's Hair & Beauty",
       "See recent braids, knotless, cornrows and styles from Marie's Hair & Beauty in Wolverhampton.",
-      body, phero("Gallery", "Fresh from <em>the chair.</em>", "A look at recent work from the salon."), script='<script src="gallery.js"></script>'))
+      body, phero("Gallery", "Fresh from <em>the chair.</em>", "Real work from the chair, straight from the salon."), script='<script src="gallery.js"></script>'))
 
 # ============================================================== OFFERS
 body = f"""
