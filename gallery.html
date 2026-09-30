@@ -5,56 +5,59 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Gallery | Marie's Hair & Beauty</title>
 <meta name="description" content="See recent braids, knotless, cornrows and styles from Marie's Hair & Beauty in Wolverhampton.">
-<meta name="theme-color" content="#c2185b">
+<meta name="theme-color" content="#0c0709">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Gallery | Marie's Hair & Beauty">
 <meta property="og:description" content="See recent braids, knotless, cornrows and styles from Marie's Hair & Beauty in Wolverhampton.">
 <meta property="og:image" content="img/braids.jpg">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Marie's Hair & Beauty","telephone":"+441902471053","email":"mariejaca@yahoo.com","url":"https://maries-hair-and-beauty.vercel.app/","sameAs":["https://www.instagram.com/marieshairandbeautysalon/"],"address":{"@type":"PostalAddress","streetAddress":"48 Victoria Street","addressLocality":"Wolverhampton","postalCode":"WV1 3PJ","addressCountry":"GB"}}</script>
 </head>
-<body class="p-gallery">
-<header class="top">
-  <div class="top-in">
-    <a class="back" href="index.html" onclick="if(history.length>1){history.back();return false}" aria-label="Back"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M15 5l-7 7 7 7"/></svg></a>
-    <a class="brand" href="index.html"><img src="img/logo.png" alt="" width="40" height="40"><span>Marie's <b>Hair &amp; Beauty</b></span></a>
-    <nav class="desk"><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html" class="on">Gallery</a><a href="offers.html">Offers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav>
-    <a class="btn sm" href="book.html">Book Appointment</a>
-  </div>
+<body class="pg-gallery">
+<div class="grain" aria-hidden="true"></div><div class="prog" aria-hidden="true"></div>
+<header class="hdr" id="hdr">
+  <a class="logo" href="index.html" aria-label="Marie's Hair &amp; Beauty, home"><img src="img/logo.png" alt="" width="44" height="44"><span>Marie's<small>Hair &amp; Beauty</small></span></a>
+  <nav class="links" aria-label="Main"><a href="services.html">Services</a><a href="gallery.html" class="on">Gallery</a><a href="offers.html">Offers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav>
+  <a class="btn sm" href="book.html" data-mag>Book now</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
 </header>
-
-<main>
-
-<section class="wrap sec">
-  <div class="pagehead"><h1>Gallery</h1><p>Fresh from the chair. More on <a href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener">@marieshairandbeautysalon</a></p></div>
-  <div class="gal"><button class="tile tall" data-i="0" aria-label="Open photo: Knotless braids with gold highlights"><img src="img/braids.jpg" alt="Knotless braids with gold highlights" loading="lazy"></button><button class="tile " data-i="1" aria-label="Open photo: Defined natural curls"><img src="img/curls.jpg" alt="Defined natural curls" loading="lazy"></button><button class="tile " data-i="2" aria-label="Open photo: Braided updo"><img src="img/cornrow.jpg" alt="Braided updo" loading="lazy"></button><button class="tile tall" data-i="3" aria-label="Open photo: Sleek neat style"><img src="img/sleek.jpg" alt="Sleek neat style" loading="lazy"></button></div>
-  <p class="center"><a class="btn ghost" href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".8" fill="currentColor"/></svg> See more on Instagram</a></p>
+<div class="mnav" id="mnav" aria-hidden="true"><a href="index.html" style="--i:0">Home</a><a href="services.html" style="--i:1">Services</a><a href="gallery.html" style="--i:2">Gallery</a><a href="offers.html" style="--i:3">Offers</a><a href="careers.html" style="--i:4">Careers</a><a href="contact.html" style="--i:5">Contact</a><a class="mbook" href="book.html" style="--i:7">Book now <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+<p style="--i:8"><a href="tel:01902471053">01902 471053</a><br>48 Victoria Street, Wolverhampton WV1 3PJ</p></div>
+<section class="phero dark">
+  <canvas class="fx" aria-hidden="true"></canvas><div class="veil"></div>
+  <div class="wrap"><p class="eyebrow" data-r>Gallery</p><h1 data-split>Fresh from <em>the chair.</em></h1><p class="sub" data-r>A look at recent work from the salon.</p></div>
 </section>
-<div class="lb" id="lb" hidden><button class="lb-x" aria-label="Close">×</button><button class="lb-p" aria-label="Previous">‹</button><img id="lbi" alt=""><button class="lb-n" aria-label="Next">›</button></div>
-<div class="sticky-cta"><a class="btn block" href="book.html">Book a style like this</a></div>
+<main id="main">
+
+<section class="light pad"><div class="wrap">
+  <div class="masonry"><button class="gt" data-i="0" aria-label="Open: Knotless braids with gold highlights" data-r data-d="0"><img src="img/braids.jpg" alt="Knotless braids with gold highlights" loading="lazy"><span>Knotless braids with gold highlights</span></button><button class="gt" data-i="1" aria-label="Open: Defined natural curls" data-r data-d="1"><img src="img/curls.jpg" alt="Defined natural curls" loading="lazy"><span>Defined natural curls</span></button><button class="gt" data-i="2" aria-label="Open: Braided updo" data-r data-d="2"><img src="img/cornrow.jpg" alt="Braided updo" loading="lazy"><span>Braided updo</span></button><button class="gt" data-i="3" aria-label="Open: Sleek neat style" data-r data-d="3"><img src="img/sleek.jpg" alt="Sleek neat style" loading="lazy"><span>Sleek neat style</span></button></div>
+  <div class="igcard" data-r><div><p class="eyebrow dk">Follow along</p><h2>More on <em>Instagram.</em></h2><p class="mut">New styles, transformations and opening updates, posted regularly.</p></div>
+  <a class="btn" href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener" data-mag>@marieshairandbeautysalon <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a></div>
+</div></section>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="lx" aria-label="Close">×</button><button class="lp" aria-label="Previous">‹</button><figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure><button class="ln" aria-label="Next">›</button></div>
 
 </main>
-<footer class="foot">
-  <div class="foot-in">
-    <div><a class="brand" href="index.html"><img src="img/logo.png" alt="" width="44" height="44"><span>Marie's <b>Hair &amp; Beauty</b></span></a>
-    <p>Unisex hair salon · All hair types</p></div>
-    <div><h4>Visit</h4><p><a href="https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolverhampton+WV1+3PJ" target="_blank" rel="noopener">48 Victoria Street, Wolverhampton WV1 3PJ</a></p></div>
-    <div><h4>Contact</h4><p><a href="tel:01902471053">01902 471053</a><br><a href="mailto:mariejaca@yahoo.com">mariejaca@yahoo.com</a></p></div>
-    <div><h4>Explore</h4><p><a href="services.html">Services</a> · <a href="gallery.html">Gallery</a> · <a href="offers.html">Offers</a> · <a href="careers.html">Careers</a> · <a href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener">Instagram</a></p></div>
+<section class="cta dark">
+  <div class="wrap">
+    <p class="eyebrow" data-r>Ready when you are</p>
+    <a class="mega" href="book.html" data-r><span>Book your</span> <em>style</em> <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
   </div>
-  <p class="copy">© <span id="yr"></span> Marie's Hair &amp; Beauty · Wolverhampton</p>
+  <div class="marq sm" aria-hidden="true"><div><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span></div></div>
+</section>
+<footer class="foot dark">
+  <div class="wrap fgrid">
+    <div><a class="logo" href="index.html"><img src="img/logo.png" alt="" width="52" height="52"><span>Marie's<small>Hair &amp; Beauty</small></span></a>
+      <p class="mut">Unisex hair salon for all hair types.<br>Wolverhampton.</p></div>
+    <div><h4>Visit</h4><p><a href="https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolverhampton+WV1+3PJ" target="_blank" rel="noopener">48 Victoria Street<br>Wolverhampton<br>WV1 3PJ</a></p></div>
+    <div><h4>Talk to us</h4><p><a href="tel:01902471053">01902 471053</a><br><a href="mailto:mariejaca@yahoo.com">mariejaca@yahoo.com</a><br><a href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener">@marieshairandbeautysalon</a></p></div>
+    <div><h4>Explore</h4><p><a href="services.html">Services</a><br><a href="gallery.html">Gallery</a><br><a href="offers.html">Offers</a><br><a href="careers.html">Careers</a><br><a href="book.html">Book</a></p></div>
+  </div>
+  <p class="wrap copy">© <span id="yr"></span> Marie's Hair &amp; Beauty. All rights reserved.</p>
 </footer>
-<nav class="tabbar" aria-label="Main"><a href="index.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Home</span></a><a href="services.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6L20 18M8.6 16.4L20 6"/></svg><span>Services</span></a><a href="book.html" class=" mid"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Book</span></a><a href="gallery.html" class="on"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.500"/><path d="M21 16l-5-5-9 9"/></svg><span>Gallery</span></a><a href="contact.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Contact</span></a></nav>
-<script src="app.js"></script>
-<script>
-(function(){var t=[].slice.call(document.querySelectorAll('.tile')),lb=document.getElementById('lb'),im=document.getElementById('lbi'),i=0;
-function show(n){i=(n+t.length)%t.length;var s=t[i].querySelector('img');im.src=s.src;im.alt=s.alt;lb.hidden=false;document.body.style.overflow='hidden'}
-function hide(){lb.hidden=true;document.body.style.overflow=''}
-t.forEach(function(b,n){b.addEventListener('click',function(){show(n)})});
-lb.querySelector('.lb-x').onclick=hide;lb.querySelector('.lb-p').onclick=function(){show(i-1)};lb.querySelector('.lb-n').onclick=function(){show(i+1)};
-lb.addEventListener('click',function(e){if(e.target===lb)hide()});
-document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)})})();
-</script>
+<script src="site.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>

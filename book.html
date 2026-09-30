@@ -5,87 +5,86 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Book Appointment | Marie's Hair & Beauty</title>
 <meta name="description" content="Book your hair appointment online at Marie's Hair & Beauty, Wolverhampton. Choose a service, date and time.">
-<meta name="theme-color" content="#c2185b">
+<meta name="theme-color" content="#0c0709">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Book Appointment | Marie's Hair & Beauty">
 <meta property="og:description" content="Book your hair appointment online at Marie's Hair & Beauty, Wolverhampton. Choose a service, date and time.">
 <meta property="og:image" content="img/braids.jpg">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Marie's Hair & Beauty","telephone":"+441902471053","email":"mariejaca@yahoo.com","url":"https://maries-hair-and-beauty.vercel.app/","sameAs":["https://www.instagram.com/marieshairandbeautysalon/"],"address":{"@type":"PostalAddress","streetAddress":"48 Victoria Street","addressLocality":"Wolverhampton","postalCode":"WV1 3PJ","addressCountry":"GB"}}</script>
 </head>
-<body class="p-book">
-<header class="top">
-  <div class="top-in">
-    <a class="back" href="index.html" onclick="if(history.length>1){history.back();return false}" aria-label="Back"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M15 5l-7 7 7 7"/></svg></a>
-    <a class="brand" href="index.html"><img src="img/logo.png" alt="" width="40" height="40"><span>Marie's <b>Hair &amp; Beauty</b></span></a>
-    <nav class="desk"><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav>
-    <a class="btn sm" href="book.html">Book Appointment</a>
-  </div>
+<body class="pg-book">
+<div class="grain" aria-hidden="true"></div><div class="prog" aria-hidden="true"></div>
+<header class="hdr" id="hdr">
+  <a class="logo" href="index.html" aria-label="Marie's Hair &amp; Beauty, home"><img src="img/logo.png" alt="" width="44" height="44"><span>Marie's<small>Hair &amp; Beauty</small></span></a>
+  <nav class="links" aria-label="Main"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav>
+  <a class="btn sm" href="book.html" data-mag>Book now</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
 </header>
-
-<main>
-
-<section class="wrap sec narrow booking" id="bk">
-  <div class="pagehead"><h1>Book Appointment</h1><p>Four quick steps. We'll confirm your slot by phone or email.</p></div>
-  <ol class="prog" id="prog"><li class="on">Service</li><li>Date</li><li>Time</li><li>Details</li></ol>
-
-  <div class="step on" data-s="0">
-    <h2>Choose a service</h2>
-    <div class="chips"><button type="button" class="chip" data-v="Hair Cut"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6L20 18M8.6 16.4L20 6"/></svg></i><span>Hair Cuts</span></button><button type="button" class="chip" data-v="Braids / Knotless"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M8 3c4 3-4 6 0 9s-4 6 0 9M16 3c-4 3 4 6 0 9s4 6 0 9"/><path d="M12 3v18" opacity=".5"/></svg></i><span>Braids & Knotless</span></button><button type="button" class="chip" data-v="Cornrows / Twists"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 8h18v4H3z"/><path d="M6 12v6M9 12v6M12 12v6M15 12v6M18 12v6"/></svg></i><span>Cornrows & Twists</span></button><button type="button" class="chip" data-v="Hair Styling"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></i><span>Hair Styling</span></button><button type="button" class="chip" data-v="Colouring / Highlights"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.500 6-11 6-11z"/></svg></i><span>Colouring & Highlights</span></button><button type="button" class="chip" data-v="Hair Treatment"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 20s-8-5-8-11a4.500 4.500 0 0 1 8-2.500A4.500 4.500 0 0 1 20 9c0 6-8 11-8 11z"/></svg></i><span>Hair Treatments</span></button><button type="button" class="chip" data-v="Not sure, advise me"><i><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3l2.800 5.800 6.200.9-4.500 4.400 1.100 6.200L12 17.300 6.400 20.300l1.100-6.200L3 9.700l6.200-.9z"/></svg></i><span>Not sure</span></button></div>
-  </div>
-  <div class="step" data-s="1">
-    <h2>Pick a date</h2>
-    <p class="mut small" id="dnote"></p>
-    <div class="dates" id="dates"></div>
-  </div>
-  <div class="step" data-s="2">
-    <h2>Choose a time</h2>
-    <div class="times" id="times"></div>
-    <p class="mut small">Time slots are requests. We'll confirm availability with you.</p>
-  </div>
-  <div class="step" data-s="3">
-    <h2>Your details</h2>
-    <form class="form flat" id="df" novalidate>
-      <label>Full name<input name="name" required autocomplete="name"></label>
-      <label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="07xxx xxxxxx"></label>
-      <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label>
-      <label>Notes <small>(style, length, colour, anything we should know)</small><textarea name="notes" rows="3"></textarea></label>
-      <label class="chk"><input type="checkbox" id="disc"> Apply the opening 10% discount (bookings 1–14 Oct 2026)</label>
-      <label class="chk"><input type="checkbox" id="rem" checked> Remember my details on this device</label>
-    </form>
-  </div>
-  <p class="err" id="err" role="alert"></p>
-
-  <div class="summary" id="sum" hidden></div>
-  <div class="bar"><button class="btn ghost" id="prev" type="button" hidden>Back</button><button class="btn block" id="next" type="button" disabled>Continue</button></div>
-
-  <div class="done" id="done" hidden>
-    <div class="tick"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12.500l4.500 4.500L19 7"/></svg></div>
-    <h2>Request ready to send</h2>
-    <p id="dmsg"></p>
-    <div class="summary" id="dsum"></div>
-    <p class="mut small">Your email app should have opened with the booking ready. Tap <b>Send</b> there to finish. If it didn't open, use the button below.</p>
-    <a class="btn block" id="mailbtn" href="#"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></svg> Send booking email</a>
-    <button class="btn ghost block" id="icsbtn" type="button"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg> Add to my calendar</button>
-    <a class="btn ghost block" href="tel:01902471053"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Call 01902 471053</a>
-    <a class="link" href="book.html">Make another booking</a>
-  </div>
+<div class="mnav" id="mnav" aria-hidden="true"><a href="index.html" style="--i:0">Home</a><a href="services.html" style="--i:1">Services</a><a href="gallery.html" style="--i:2">Gallery</a><a href="offers.html" style="--i:3">Offers</a><a href="careers.html" style="--i:4">Careers</a><a href="contact.html" style="--i:5">Contact</a><a class="mbook" href="book.html" style="--i:7">Book now <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+<p style="--i:8"><a href="tel:01902471053">01902 471053</a><br>48 Victoria Street, Wolverhampton WV1 3PJ</p></div>
+<section class="phero dark">
+  <canvas class="fx" aria-hidden="true"></canvas><div class="veil"></div>
+  <div class="wrap"><p class="eyebrow" data-r>Book</p><h1 data-split>Your chair <em>is waiting.</em></h1><p class="sub" data-r>Choose a service, pick a day, select a time. It takes under a minute.</p></div>
 </section>
+<main id="main">
 
-</main>
-<footer class="foot">
-  <div class="foot-in">
-    <div><a class="brand" href="index.html"><img src="img/logo.png" alt="" width="44" height="44"><span>Marie's <b>Hair &amp; Beauty</b></span></a>
-    <p>Unisex hair salon · All hair types</p></div>
-    <div><h4>Visit</h4><p><a href="https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolverhampton+WV1+3PJ" target="_blank" rel="noopener">48 Victoria Street, Wolverhampton WV1 3PJ</a></p></div>
-    <div><h4>Contact</h4><p><a href="tel:01902471053">01902 471053</a><br><a href="mailto:mariejaca@yahoo.com">mariejaca@yahoo.com</a></p></div>
-    <div><h4>Explore</h4><p><a href="services.html">Services</a> · <a href="gallery.html">Gallery</a> · <a href="offers.html">Offers</a> · <a href="careers.html">Careers</a> · <a href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener">Instagram</a></p></div>
+<section class="light pad booking"><div class="wrap bgrid">
+  <div class="bsteps" id="bk">
+    <section class="bs open" id="s1" data-s="0"><header><i>1</i><h2>Service</h2><button class="edit" type="button">Change</button></header>
+      <div class="bbody"><div class="opts"><button type="button" class="opt" data-v="Hair Cut"><b>01</b><span>Hair Cuts</span></button><button type="button" class="opt" data-v="Braids / Knotless"><b>02</b><span>Braids & Knotless</span></button><button type="button" class="opt" data-v="Cornrows / Twists"><b>03</b><span>Cornrows & Twists</span></button><button type="button" class="opt" data-v="Hair Styling"><b>04</b><span>Hair Styling</span></button><button type="button" class="opt" data-v="Colouring / Highlights"><b>05</b><span>Colour & Highlights</span></button><button type="button" class="opt" data-v="Hair Treatment"><b>06</b><span>Hair Treatments</span></button><button type="button" class="opt" data-v="Not sure, advise me"><b>07</b><span>Not sure yet</span></button></div></div></section>
+    <section class="bs" id="s2" data-s="1"><header><i>2</i><h2>Date</h2><button class="edit" type="button">Change</button></header>
+      <div class="bbody"><div class="cal"><div class="calh"><button type="button" id="cprev" aria-label="Previous month">‹</button><b id="cmonth"></b><button type="button" id="cnext" aria-label="Next month">›</button></div>
+      <div class="cdow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><div class="cgrid2" id="cdays"></div>
+      <p class="mut sm"><i class="dot"></i> Opening offer: 10% off (1–14 Oct 2026)</p></div></div></section>
+    <section class="bs" id="s3" data-s="2"><header><i>3</i><h2>Time</h2><button class="edit" type="button">Change</button></header>
+      <div class="bbody"><div class="times" id="times"></div><p class="mut sm">Times are requests. We'll confirm availability with you.</p></div></section>
+    <section class="bs" id="s4" data-s="3"><header><i>4</i><h2>Your details</h2></header>
+      <div class="bbody"><form class="form" id="df" novalidate>
+        <div class="row2"><label>Full name<input name="name" required autocomplete="name"></label><label>Phone<input name="phone" type="tel" required autocomplete="tel" placeholder="07xxx xxxxxx"></label></div>
+        <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label>
+        <label>Notes <small>(style, length, colour, inspiration)</small><textarea name="notes" rows="3"></textarea></label>
+        <label class="chk"><input type="checkbox" id="rem" checked> Remember my details on this device</label>
+      </form></div></section>
   </div>
-  <p class="copy">© <span id="yr"></span> Marie's Hair &amp; Beauty · Wolverhampton</p>
+  <aside class="bsum" id="bsum">
+    <h3>Your appointment</h3>
+    <dl><div><dt>Service</dt><dd id="v-s">Choose a service</dd></div><div><dt>Date</dt><dd id="v-d">Pick a date</dd></div><div><dt>Time</dt><dd id="v-t">Select a time</dd></div><div id="v-o" hidden><dt>Offer</dt><dd>10% opening discount</dd></div></dl>
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn block" id="go" type="button" disabled>Request booking <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+    <p class="mut sm">We'll confirm by phone or email. Prefer to talk? <a href="tel:01902471053">01902 471053</a></p>
+  </aside>
+</div></section>
+<div class="modal" id="done" hidden><div class="mbox">
+  <div class="tick"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
+  <h2>Request ready to send</h2><p id="dmsg"></p><dl id="dsum"></dl>
+  <p class="mut sm">Your email app should have opened with the booking ready. Press <b>Send</b> to finish. If it didn't open, use the button below.</p>
+  <a class="btn block" id="mailbtn" href="#">Send booking email <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+  <button class="btn line block" id="icsbtn" type="button">Add to my calendar</button>
+  <a class="tlink" href="book.html">Make another booking</a>
+</div></div>
+</main>
+<section class="cta dark">
+  <div class="wrap">
+    <p class="eyebrow" data-r>Ready when you are</p>
+    <a class="mega" href="book.html" data-r><span>Book your</span> <em>style</em> <svg class="ar" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="marq sm" aria-hidden="true"><div><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span><span>Look Good</span><span>Feel Good</span><span>Be You</span></div></div>
+</section>
+<footer class="foot dark">
+  <div class="wrap fgrid">
+    <div><a class="logo" href="index.html"><img src="img/logo.png" alt="" width="52" height="52"><span>Marie's<small>Hair &amp; Beauty</small></span></a>
+      <p class="mut">Unisex hair salon for all hair types.<br>Wolverhampton.</p></div>
+    <div><h4>Visit</h4><p><a href="https://www.google.com/maps/search/?api=1&query=48+Victoria+Street+Wolverhampton+WV1+3PJ" target="_blank" rel="noopener">48 Victoria Street<br>Wolverhampton<br>WV1 3PJ</a></p></div>
+    <div><h4>Talk to us</h4><p><a href="tel:01902471053">01902 471053</a><br><a href="mailto:mariejaca@yahoo.com">mariejaca@yahoo.com</a><br><a href="https://www.instagram.com/marieshairandbeautysalon/" target="_blank" rel="noopener">@marieshairandbeautysalon</a></p></div>
+    <div><h4>Explore</h4><p><a href="services.html">Services</a><br><a href="gallery.html">Gallery</a><br><a href="offers.html">Offers</a><br><a href="careers.html">Careers</a><br><a href="book.html">Book</a></p></div>
+  </div>
+  <p class="wrap copy">© <span id="yr"></span> Marie's Hair &amp; Beauty. All rights reserved.</p>
 </footer>
-<nav class="tabbar" aria-label="Main"><a href="index.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Home</span></a><a href="services.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6L20 18M8.6 16.4L20 6"/></svg><span>Services</span></a><a href="book.html" class="on mid"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Book</span></a><a href="gallery.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.500"/><path d="M21 16l-5-5-9 9"/></svg><span>Gallery</span></a><a href="contact.html" class=""><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Contact</span></a></nav>
-<script src="app.js"></script>
+<script src="site.js"></script>
 <script src="book.js"></script>
 </body>
 </html>
