@@ -31,6 +31,11 @@ WORKS = {
 }
 
 
+def hero_video(k):
+    return (f'<video muted loop playsinline autoplay preload="auto" poster="video/hero-{k}.jpg" aria-hidden="true" tabindex="-1">'
+            f'<source src="video/hero-{k}.mp4" type="video/mp4"><source src="video/hero-{k}.webm" type="video/webm"></video>')
+
+
 def photo(k, cls="", lazy=True):
     cap, alt = WORKS[k]
     return (f'<img class="{cls}" src="img/work-{k}.jpg" alt="{alt}" '
@@ -143,9 +148,9 @@ hero = f"""<section class="hero dark" id="top">
       <div class="hcta" data-r data-d="4"><a class="btn" href="book.html" data-mag>Book appointment {ARROW}</a><a class="btn line" href="services.html" data-mag>Explore services</a></div>
     </div>
     <div class="hpics" aria-hidden="true">
-      <figure class="arch a1" data-speed="-30">{photo("braids", lazy=False)}</figure>
-      <figure class="arch a2" data-speed="40">{photo("bob", lazy=False)}</figure>
-      <figure class="arch a3" data-speed="-55">{photo("curls", lazy=False)}</figure>
+      <figure class="arch a1" data-speed="-30">{hero_video("braids")}</figure>
+      <figure class="arch a2" data-speed="40">{hero_video("bob")}</figure>
+      <figure class="arch a3" data-speed="-55">{hero_video("curls")}</figure>
       <a class="seal" href="offers.html" data-mag aria-label="Re-grand opening offer: 10% off">
         <svg viewBox="0 0 200 200"><defs><path id="c" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#c">RE-GRAND OPENING · 1ST OCTOBER 2026 · 14 DAYS · </textPath></text></svg>
         <b>10<small>%</small></b><span>off</span>

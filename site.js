@@ -66,6 +66,13 @@ if(cd){var open=new Date('2026-10-01T09:00:00+01:00'),end=new Date('2026-10-15T0
   var s=Math.floor(dd/1e3),v=[[Math.floor(s/86400),'Days'],[Math.floor(s%86400/3600),'Hours'],[Math.floor(s%3600/60),'Mins'],[s%60,'Secs']];
   cd.innerHTML=v.map(function(x){return'<div><b>'+String(x[0]).padStart(2,'0')+'</b><small>'+x[1]+'</small></div>'}).join('');setTimeout(tick,1000)})()}
 
+/* ---- hero clips: respect reduced motion, pause when off-screen ---- */
+var hv=$$('.hpics video');
+function playV(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+if(hv.length){
+ if(RM){hv.forEach(function(v){v.removeAttribute('autoplay');v.pause()})}
+ else{new IntersectionObserver(function(es){hv.forEach(function(v){if(es[0].isIntersecting)playV(v);else v.pause()})}).observe($('.hpics'))}}
+
 /* ---- mailto forms ---- */
 window.mailForm=function(id,subject,keys,labels){
  var f=d.getElementById(id);if(!f)return;
